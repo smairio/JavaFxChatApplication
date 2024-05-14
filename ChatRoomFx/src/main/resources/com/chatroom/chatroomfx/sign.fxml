@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:controller="com.chatroom.chatroomfx.SignController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="546.0" prefWidth="353.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="549.0" prefWidth="377.0" >
+         <children>
+            <AnchorPane fx:id="login_form" layoutX="12.0" layoutY="10.0" prefHeight="527.0" prefWidth="330.0" stylesheets="style.css">
+               <children>
+                  <FontAwesomeIcon fill="#2a827b" glyphName="USER" layoutX="140.0" layoutY="70.0" size="5em" text="" />
+                  <Label layoutX="90.0" layoutY="79.0" prefHeight="37.0" prefWidth="152.0" text="Sign in Account" textFill="#187778">
+                     <font>
+                        <Font name="Noto Looped Thai UI Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="login_username" layoutX="27.0" layoutY="146.0" prefHeight="26.0" prefWidth="275.0" promptText="Username" styleClass="textfield" stylesheets="style.css" />
+                  <PasswordField fx:id="login_password" layoutX="29.0" layoutY="189.0" prefHeight="26.0" prefWidth="275.0" promptText="Password" styleClass="textfield" stylesheets="style.css" />
+                  <TextField fx:id="login_showPassword" layoutX="29.0" layoutY="189.0" prefHeight="26.0" prefWidth="275.0" promptText="Password" styleClass="textfield" stylesheets="style.css" visible="false"/>
+                  <CheckBox fx:id="login_SelectShowPassword" layoutX="27.0" onAction="#showPassword" layoutY="233.0" mnemonicParsing="false" text="Show Password" />
+                  <Button fx:id="login_btn" layoutX="50.0" layoutY="275.0" onAction="#login" mnemonicParsing="false" prefHeight="43.0" prefWidth="244.0" styleClass="btn" stylesheets="style.css" text="Login" />
+                  <Label layoutX="117.0" layoutY="441.0" text="Register Account">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="login_createAccount" layoutX="50.0" layoutY="470.0" mnemonicParsing="false" prefHeight="43.0" onAction="#switchForm" prefWidth="244.0" styleClass="btn" stylesheets="style.css" text="Create Account" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="signup_form" layoutX="12.0" layoutY="10.0" prefHeight="527.0" prefWidth="330.0" stylesheets="style.css" visible="false">
+               <children>
+                  <FontAwesomeIcon fill="#2a827b" glyphName="USER_PLUS" layoutX="127.0" layoutY="70.0" size="5em" text="" />
+                  <Label layoutX="85.0" layoutY="79.0" prefHeight="37.0" prefWidth="159.0" text="Sign Up Account" textFill="#187778">
+                     <font>
+                        <Font name="Noto Looped Thai UI Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="signup_username" layoutX="27.0" layoutY="146.0" prefHeight="26.0" prefWidth="275.0" promptText="Username" styleClass="textfield" stylesheets="style.css" />
+                  <PasswordField fx:id="signup_password" layoutX="27.0" layoutY="189.0" prefHeight="26.0" prefWidth="275.0" promptText="Password" styleClass="textfield" stylesheets="style.css" />
+                  <PasswordField fx:id="signup_confirmPassword" layoutX="27.0" layoutY="229.0" prefHeight="26.0" prefWidth="275.0" promptText="Confirm Password" styleClass="textfield" stylesheets="style.css" />
+                  <TextField fx:id="signup_firstname" layoutX="27.0" layoutY="271.0" prefHeight="26.0" prefWidth="275.0" promptText="Firstname" styleClass="textfield" stylesheets="style.css" />
+                  <TextField fx:id="signup_lastname" layoutX="27.0" layoutY="315.0" prefHeight="26.0" prefWidth="275.0" promptText="Lastname" styleClass="textfield" stylesheets="style.css" />
+                  <Button fx:id="signup_btn" layoutX="42.0" layoutY="370.0" mnemonicParsing="false" onAction="#register" prefHeight="43.0" prefWidth="244.0" styleClass="btn" stylesheets="style.css" text="Sign Up" />
+                  <Label layoutX="117.0" layoutY="441.0" text="Sign In Account">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="signup_loginAccount" layoutX="46.0" layoutY="470.0" onAction="#switchForm" mnemonicParsing="false" prefHeight="43.0" prefWidth="244.0" styleClass="btn" stylesheets="style.css" text="Login Account" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

@@ -14,5 +14,5 @@ CREATE TABLE IF NOT EXISTS TextMessages (
     id INT PRIMARY KEY AUTO_INCREMENT,
     sender_id INT NOT NULL,
     sendTime DATETIME NOT NULL,
-    message TEXT NOT NULL,
+    message TEXT NOT NULL
 );
